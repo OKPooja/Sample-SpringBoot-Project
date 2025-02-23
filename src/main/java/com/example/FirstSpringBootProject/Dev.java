@@ -6,8 +6,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class Dev {
     //Method 1: Field injection
-    //@Autowired
-    private Code code;
+    @Autowired
+    //private Code code;
+    private Computer comp;
 
     //Method 2: Through constructor
 //    Dev(Code code) {
@@ -15,12 +16,13 @@ public class Dev {
 //    }
 //
     //Method 3: Through setters
-    @Autowired
-    public void setCode(Code code) {
-        this.code = code;
-    }
+//    @Autowired
+//    public void setCode(Code code) {
+//        this.code = code;
+//    }
+
     public void build() {
         System.out.println("Working on an awesome project!");
-        code.coding();
+        comp.compile();
     }
 }
